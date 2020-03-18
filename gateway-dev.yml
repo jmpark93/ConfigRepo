@@ -8,16 +8,16 @@ spring:
   cloud: 
     gateway:
       routes:
-        - id: apptest_greeting
-          uri: http://localhost:8082
-          predicates:
-          - Path=/greeting  
-#        - id: apptest_jmpark
+#        - id: apptest_greeting
 #          uri: http://localhost:8082
 #          predicates:
-#          - Path=/jmpark93
-#          filters:
-#          - RewritePath=/greeting
+#          - Path=/greeting  
+        - id: apptest_jmpark
+          uri: http://localhost:8082
+          predicates:
+          - Path=/**
+          filters:
+          - RewritePath=/greeting/(?<segment>.*), /$\{segment}
 
   boot:
     admin:
