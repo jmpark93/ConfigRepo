@@ -1,2 +1,5 @@
+server:
+  port: 8083
+  
 application:
   message: "Message From {ENV} Local Git Repository"
