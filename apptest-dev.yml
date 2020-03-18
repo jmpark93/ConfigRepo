@@ -20,3 +20,5 @@ management:
       exposure:
         include: "*"
         exclude: env, beans, heapdump, threaddump
+    health:
+      show-details: always
