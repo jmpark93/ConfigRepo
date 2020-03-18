@@ -11,13 +11,13 @@ spring:
         - id: apptest_greeting
           uri: http://localhost:8082
           predicates:
-            - Path=/greeting  
+          - Path=/greeting  
         - id: apptest_jmpark
           uri: http://localhost:8082
           predicates:
-            - Path=/jmpark93
+          - Path=/jmpark93
           filters:
-            - RewritePath=/gretting
+          - RewritePath=/greeting
   boot:
     admin:
       client:
