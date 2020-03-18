@@ -14,6 +14,10 @@ spring:
         instance:
           service-url: http://localhost:8082
 
+health:
+  config:
+    enabled: false
+    
 management:
   endpoints:
     web:
@@ -23,7 +27,6 @@ management:
   endpoint:
     health:
       show-details: always
-      
-health:
-  config:
-    enabled: false
+    shutdown:
+      enabled: true
+
