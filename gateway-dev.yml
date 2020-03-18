@@ -5,6 +5,13 @@ spring:
   application:
     name: Gateway
 
+  cloud: 
+    gateway:
+      routes:
+        - id: apptest_greeting
+          url: http://localhost:8082
+          predicates:
+            - Path=/greeting  
   boot:
     admin:
       client:
