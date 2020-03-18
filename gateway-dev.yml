@@ -1,5 +1,31 @@
 server:
   port: 8083
   
-application:
-  message: "Message From {ENV} Local Git Repository"
+spring:
+  application:
+    name: apptest
+
+  boot:
+    admin:
+      client:
+        url: http://localhost:8080
+        username: admin
+        password: admin
+        instance:
+          service-url: http://localhost:8083
+
+health:
+  config:
+    enabled: false
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: env, beans, heapdump, threaddump
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: true
