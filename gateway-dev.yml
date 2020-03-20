@@ -1,25 +1,11 @@
 spring:
   application:
     name: Gateway
-
   cloud: 
     discovery:
       client:
         health-indicator:
           enabled: false  
-    gateway:
-      routes:
-      - id: apptest_greeting
-        uri: http://localhost:8082
-        predicates:
-        - Path=/greeting  
-      - id: apptest_jmpark
-        uri: http://localhost:8082
-        predicates:
-        - Path=/jmpark93
-        filters:
-        - RewritePath=/jmpark93, /greeting
-
   boot:
     admin:
       client:
