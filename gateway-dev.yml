@@ -26,11 +26,11 @@ spring:
   boot:
     admin:
       client:
-        url: http://localhost:8080
+        url: http://bootadmin.private.kpaata.kr
         username: admin
         password: admin
         instance:
-          service-url: http://localhost:8083
+          service-url: http://gateway.kpaasta.kr
 
 health:
   config:
