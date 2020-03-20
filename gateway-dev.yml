@@ -3,6 +3,7 @@ spring:
     name: Gateway
   cloud: 
     discovery:
+      enabled: false    
       client:
         health-indicator:
           enabled: false  
