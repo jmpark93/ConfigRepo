@@ -6,6 +6,10 @@ spring:
     name: Gateway
 
   cloud: 
+    discovery:
+      client:
+        health-indicator:
+          enabled: false  
     gateway:
       routes:
       - id: apptest_greeting
