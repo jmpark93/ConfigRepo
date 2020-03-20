@@ -26,11 +26,11 @@ spring:
   boot:
     admin:
       client:
-        url: http://bootadmin.private.kpaata.kr
+        url: http://bootadmin.private.kpaasta.kr
         username: admin
         password: admin
         instance:
-          service-url: http://gateway.kpaasta.kr
+          service-url: https://gateway.kpaasta.kr
 
 health:
   config:
